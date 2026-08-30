@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 351 76% 8%; /* Dark Maroon background */
+    --foreground: 35 40% 92%; /* Cream/light gold text */
+    --card: 350 15% 4%; /* Black cards */
+    --card-foreground: 35 40% 92%;
+    --primary: 40 60% 60%; /* Gold accent */
+    --primary-foreground: 0 0% 0%; /* Black text on gold buttons */
+    --muted: 351 40% 12%; /* Muted dark maroon */
+    --muted-foreground: 35 20% 70%;
+    --border: 351 30% 15%; /* Maroon-gold border */
+  }
+
+  html.light {
+    --background: 350 40% 97%; /* Soft light maroon-white background */
+    --foreground: 350 80% 6%; /* Black/extremely dark maroon text */
+    --card: 0 0% 100%; /* White card */
+    --card-foreground: 350 80% 6%;
+    --primary: 40 65% 52%; /* Rich gold */
+    --primary-foreground: 0 0% 0%; /* Black text */
+    --muted: 350 20% 92%;
+    --muted-foreground: 350 15% 40%;
+    --border: 350 20% 86%;
+  }
+
+  html.dark {
+    --background: 351 76% 8%; /* Dark Maroon background */
+    --foreground: 35 40% 92%;
+    --card: 350 15% 4%; /* Black cards */
+    --card-foreground: 35 40% 92%;
+    --primary: 40 60% 60%; /* Gold accent */
+    --primary-foreground: 0 0% 0%;
+    --muted: 351 40% 12%;
+    --muted-foreground: 35 20% 70%;
+    --border: 351 30% 15%;
+  }
+}
+
+html,
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: #DFBA73; /* Gold scrollbar */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
+
+/* Dark Mode Glass */
+.glass-card {
+  background: rgba(10, 10, 10, 0.75); /* Rich Black Glass */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(223, 186, 115, 0.15); /* Gold border */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card:hover {
+  border-color: rgba(223, 186, 115, 0.4);
+  box-shadow: 0 12px 40px -10px rgba(223, 186, 115, 0.25);
+  transform: translateY(-3px);
+}
+
+.glass-nav {
+  background: rgba(15, 5, 7, 0.85); /* Dark Maroon Glass */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(223, 186, 115, 0.15);
+}
+
+/* Light Mode Overrides */
+html.light body {
+  background-color: #FAF3F4; /* Light Rose Maroon background */
+  color: #050505; /* Black text */
+}
+
+html.light .glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(163, 126, 58, 0.18); /* Soft Gold border */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+html.light .glass-card:hover {
+  border-color: rgba(163, 126, 58, 0.45);
+  box-shadow: 0 15px 30px -5px rgba(163, 126, 58, 0.15);
+}
+
+html.light .glass-nav {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(163, 126, 58, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+html.light .bg-midnight-950,
+html.light .bg-midnight-900\/60,
+html.light .bg-midnight-950\/80,
+html.light .bg-navy-950,
+html.light .bg-dark-base {
+  background-color: #FAF3F4 !important;
+}
+
+html.light .bg-midnight-900,
+html.light .bg-midnight-900\/80,
+html.light .bg-navy-900 {
+  background-color: #EFE4E6 !important; /* Slightly darker light maroon card */
+}
+
+html.light .text-white {
+  color: #050505 !important;
+}
+
+html.light .text-slate-200,
+html.light .text-slate-300,
+html.light .text-zinc-100,
+html.light .text-zinc-200 {
+  color: #120204 !important; /* Dark maroon/black */
+}
+
+html.light .text-slate-400,
+html.light .text-zinc-400 {
+  color: #6B4E52 !important; /* Muted maroon */
+}
+
+html.light input,
+html.light textarea {
+  background-color: #ffffff !important;
+  color: #050505 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #DFBA73 40%, #C5A059 80%, #9A7B3E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.light .text-gradient {
+  background: linear-gradient(135deg, #7A1A24 0%, #4D0A11 50%, #200205 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-purple-gradient {
+  background: linear-gradient(135deg, #DFBA73 0%, #B32D42 50%, #6B1D2F 100%); /* Gold to Maroon gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Background Grid */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(223, 186, 115, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(223, 186, 115, 0.05) 1px, transparent 1px);
+}
+
+html.light .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(154, 28, 46, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(154, 28, 46, 0.05) 1px, transparent 1px);
+}
