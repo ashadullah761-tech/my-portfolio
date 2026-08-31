@@ -103,28 +103,21 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="lg:col-span-5 space-y-6"
           >
-            <div className="glass-card p-6 rounded-2xl border border-purple-500/20 flex items-start space-x-4">
-              <div className="p-3.5 rounded-xl bg-purple-500/10 text-purple-400">
+            <a
+              href="mailto:ashadullah761@gmail.com?subject=Project%20Inquiry%20-%20Ashadullah"
+              className="glass-card p-6 rounded-2xl border border-purple-500/20 flex items-start space-x-4 hover:border-purple-500/40 transition-all group block"
+            >
+              <div className="p-3.5 rounded-xl bg-purple-500/10 text-purple-400 group-hover:bg-purple-500/20 transition-colors">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
                 <h4 className="text-base font-bold font-heading text-white">Direct Email</h4>
-                <p className="text-sm text-slate-400 mt-0.5">ashadullah761@gmail.com</p>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = 'mailto:ashadullah761@gmail.com';
-                    navigator.clipboard.writeText('ashadullah761@gmail.com');
-                    toast.success('Email address copied!', {
-                      description: 'ashadullah761@gmail.com copied to clipboard.',
-                    });
-                  }}
-                  className="text-xs text-purple-400 hover:underline mt-2 inline-block font-medium cursor-pointer text-left"
-                >
+                <p className="text-sm text-slate-400 mt-0.5 group-hover:text-purple-300 transition-colors">ashadullah761@gmail.com</p>
+                <span className="text-xs text-purple-400 group-hover:underline mt-2 inline-flex items-center font-medium">
                   Send an email &rarr;
-                </button>
+                </span>
               </div>
-            </div>
+            </a>
 
             <div className="glass-card p-6 rounded-2xl border border-purple-500/20 flex items-start space-x-4">
               <div className="p-3.5 rounded-xl bg-purple-500/10 text-purple-400">

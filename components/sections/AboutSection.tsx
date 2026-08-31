@@ -1,9 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { Stat } from '@/types';
-import { Terminal, CheckCircle2, Award } from 'lucide-react';
+import { Terminal, CheckCircle2, Award, Code2 } from 'lucide-react';
 
 interface AboutSectionProps {
   stats: Stat[];
@@ -37,7 +36,7 @@ export default function AboutSection({ stats }: AboutSectionProps) {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Avatar Column */}
+          {/* Developer Code Terminal Column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -49,22 +48,61 @@ export default function AboutSection({ stats }: AboutSectionProps) {
               {/* Decorative Glow */}
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 rounded-3xl blur-xl opacity-40 group-hover:opacity-70 transition duration-500" />
               
-              {/* Image Frame */}
-              <div className="relative rounded-3xl overflow-hidden glass-card p-3 border border-purple-500/20">
-                <div className="relative h-[400px] w-full rounded-2xl overflow-hidden bg-navy-950">
-                  <Image
-                    src="/ashadullah.jpg"
-                    alt="Ashadullah - Profile Photo"
-                    fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-midnight-950/90 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 p-4 glass-card rounded-xl border border-purple-500/20 text-white">
-                    <p className="font-bold font-heading text-sm text-white">Ashadullah</p>
-                    <p className="text-xs text-purple-300">Full Stack Architect &amp; UI Specialist</p>
+              {/* Terminal / Code Window Frame */}
+              <div className="relative rounded-3xl overflow-hidden glass-card border border-purple-500/20 bg-navy-950/90 shadow-2xl p-6">
+                {/* Terminal Header */}
+                <div className="flex items-center justify-between pb-4 border-b border-purple-500/15 mb-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 rounded-full bg-rose-500/80" />
+                    <div className="w-3 h-3 rounded-full bg-amber-500/80" />
+                    <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
                   </div>
+                  <div className="flex items-center space-x-1.5 text-xs text-purple-300 font-mono">
+                    <Code2 className="w-3.5 h-3.5 text-purple-400" />
+                    <span>developer.ts</span>
+                  </div>
+                  <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">
+                    Active
+                  </span>
+                </div>
+
+                {/* Code Body */}
+                <div className="font-mono text-xs sm:text-sm space-y-2.5 text-slate-300 leading-relaxed py-2">
+                  <p className="text-purple-400">
+                    <span className="text-pink-400">const</span> developer = &#123;
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-indigo-300">name</span>: <span className="text-emerald-400">&apos;Ashadullah&apos;</span>,
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-indigo-300">role</span>: <span className="text-emerald-400">&apos;Full Stack Architect&apos;</span>,
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-indigo-300">experience</span>: <span className="text-amber-300">&apos;5+ Years&apos;</span>,
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-indigo-300">stack</span>: [
+                  </p>
+                  <p className="pl-8 text-purple-300">
+                    &apos;Next.js 14&apos;, &apos;TypeScript&apos;, &apos;Supabase&apos;, &apos;Tailwind&apos;
+                  </p>
+                  <p className="pl-4">],</p>
+                  <p className="pl-4">
+                    <span className="text-indigo-300">status</span>: <span className="text-emerald-400">&apos;Available for hire&apos;</span>,
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-indigo-300">focus</span>: <span className="text-emerald-400">&apos;High performance &amp; clean UI&apos;</span>
+                  </p>
+                  <p className="text-purple-400">&#125;;</p>
+                </div>
+
+                {/* Bottom Badge */}
+                <div className="mt-4 pt-3 border-t border-purple-500/15 flex items-center justify-between text-xs text-slate-400">
+                  <div className="flex items-center space-x-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                    <span className="text-emerald-400 font-medium">Available for work</span>
+                  </div>
+                  <span className="text-purple-300/80 font-mono text-[11px]">TypeScript</span>
                 </div>
               </div>
             </div>
