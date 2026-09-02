@@ -58,54 +58,54 @@ body {
   background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: #DFBA73; /* Gold scrollbar */
+  background: #059669; /* Dark Green scrollbar */
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C5A059;
+  background: #047857;
 }
 
 /* Dark Mode Glass */
 .glass-card {
-  background: rgba(10, 10, 10, 0.75); /* Rich Black Glass */
+  background: rgba(10, 10, 10, 0.8); /* Rich Black Glass */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(223, 186, 115, 0.15); /* Gold border */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(16, 185, 129, 0.18); /* Dark Green border */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .glass-card:hover {
-  border-color: rgba(223, 186, 115, 0.4);
-  box-shadow: 0 12px 40px -10px rgba(223, 186, 115, 0.25);
+  border-color: rgba(16, 185, 129, 0.45);
+  box-shadow: 0 12px 40px -10px rgba(5, 150, 105, 0.3);
   transform: translateY(-3px);
 }
 
 .glass-nav {
-  background: rgba(15, 5, 7, 0.85); /* Dark Maroon Glass */
+  background: rgba(10, 15, 12, 0.88); /* Deep Black / Forest Glass */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(223, 186, 115, 0.15);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.18);
 }
 
 /* Light Mode Overrides */
 html.light body {
-  background-color: #FAF3F4; /* Light Rose Maroon background */
-  color: #050505; /* Black text */
+  background-color: #F4F8F5; /* Light fresh mint background */
+  color: #000000; /* Black text */
 }
 
 html.light .glass-card {
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(163, 126, 58, 0.18); /* Soft Gold border */
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(6, 78, 59, 0.15); /* Dark Green border */
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
 }
 html.light .glass-card:hover {
-  border-color: rgba(163, 126, 58, 0.45);
-  box-shadow: 0 15px 30px -5px rgba(163, 126, 58, 0.15);
+  border-color: rgba(6, 78, 59, 0.4);
+  box-shadow: 0 15px 30px -5px rgba(6, 78, 59, 0.15);
 }
 
 html.light .glass-nav {
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid rgba(163, 126, 58, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(6, 78, 59, 0.15);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -114,13 +114,13 @@ html.light .bg-midnight-900\/60,
 html.light .bg-midnight-950\/80,
 html.light .bg-navy-950,
 html.light .bg-dark-base {
-  background-color: #FAF3F4 !important;
+  background-color: #F4F8F5 !important;
 }
 
 html.light .bg-midnight-900,
 html.light .bg-midnight-900\/80,
 html.light .bg-navy-900 {
-  background-color: #EFE4E6 !important; /* Slightly darker light maroon card */
+  background-color: #E8F1EB !important;
 }
 
 html.light body,
@@ -147,47 +147,49 @@ html.light .text-slate-500,
 html.light .text-zinc-100,
 html.light .text-zinc-200,
 html.light .text-zinc-300,
-html.light .text-zinc-400,
+html.light .text-zinc-400 {
+  color: #000000 !important;
+}
+
 html.light .text-purple-200,
 html.light .text-purple-300,
 html.light .text-purple-400,
 html.light .text-indigo-300,
 html.light .text-indigo-400,
 html.light .text-blue-300,
-html.light .text-blue-400,
-html.light .text-amber-400 {
-  color: #000000 !important;
+html.light .text-blue-400 {
+  color: #065F46 !important; /* Rich Dark Green text */
 }
 
 html.light input,
 html.light textarea {
   background-color: #ffffff !important;
   color: #000000 !important;
-  border-color: #cbd5e1 !important;
+  border-color: #a7f3d0 !important;
 }
 
 html.light input::placeholder,
 html.light textarea::placeholder {
-  color: #64748b !important;
+  color: #047857 !important;
 }
 
-/* Gradient Text */
+/* Gradient Text - Dark Green to Emerald */
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #DFBA73 40%, #C5A059 80%, #9A7B3E 100%);
+  background: linear-gradient(135deg, #34D399 0%, #10B981 30%, #059669 70%, #047857 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 html.light .text-gradient,
 html.light .text-purple-gradient {
-  background: none !important;
-  -webkit-background-clip: unset !important;
-  -webkit-text-fill-color: #000000 !important;
-  color: #000000 !important;
+  background: linear-gradient(135deg, #047857 0%, #065F46 60%, #064E3B 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #064E3B !important;
 }
 
 .text-purple-gradient {
-  background: linear-gradient(135deg, #DFBA73 0%, #B32D42 50%, #6B1D2F 100%); /* Gold to Maroon gradient */
+  background: linear-gradient(135deg, #34D399 0%, #059669 50%, #064E3B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -196,14 +198,14 @@ html.light .text-purple-gradient {
 .bg-grid-pattern {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(223, 186, 115, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(223, 186, 115, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
 }
 
 html.light .bg-grid-pattern {
   background-image: 
-    linear-gradient(to right, rgba(154, 28, 46, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(154, 28, 46, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(6, 95, 70, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 95, 70, 0.05) 1px, transparent 1px);
 }
 
 /* Permanently hide Netlify Drawer & Collaborative Toolbar */

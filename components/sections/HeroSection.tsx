@@ -95,7 +95,7 @@ export default function HeroSection() {
         >
           <a
             href="#projects"
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold text-base hover:shadow-xl hover:shadow-purple-600/30 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-emerald-700 text-white font-bold text-base hover:shadow-xl hover:shadow-purple-600/30 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
           >
             <FolderGit2 className="w-5 h-5" />
             <span>Explore My Work</span>

@@ -25,20 +25,22 @@ const config: Config = {
           700: "#1A1A1A", // Lighter Charcoal
         },
         purple: {
-          400: "#E9D09E", // Light Gold
-          500: "#DFBA73", // Primary Gold
-          600: "#C5A059", // Medium Gold
-          700: "#A37E3A", // Dark Gold
+          300: "#6EE7B7", // Light Emerald Mint
+          400: "#10B981", // Emerald Green
+          500: "#059669", // Dark Green
+          600: "#047857", // Deep Dark Green
+          700: "#064E3B", // Forest Dark Green
         },
         indigo: {
-          400: "#DF8F73", // Copper/Rose Gold
-          500: "#C57259", // Medium Copper
-          600: "#A3533A", // Dark Copper
+          300: "#6EE7B7",
+          400: "#10B981",
+          500: "#059669",
+          600: "#047857",
         },
         cyber: {
-          blue: "#DFBA73", // Gold glow
-          purple: "#C5A059",
-          glow: "#DFBA73",
+          blue: "#10B981",
+          purple: "#059669",
+          glow: "#10B981",
         },
         dark: {
           base: "#1F0407", // Dark Maroon base

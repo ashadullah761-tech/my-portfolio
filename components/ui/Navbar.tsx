@@ -38,7 +38,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="#hero" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-600 to-blue-500 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-purple-500/25 group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-600 to-emerald-700 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-purple-500/25 group-hover:scale-105 transition-transform">
             A
           </div>
           <span className="text-xl font-bold font-heading tracking-tight text-white">

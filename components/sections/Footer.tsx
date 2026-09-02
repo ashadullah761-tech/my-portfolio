@@ -13,11 +13,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left Branding */}
         <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 via-indigo-600 to-blue-500 flex items-center justify-center font-bold text-white text-base shadow-md shadow-purple-600/30">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 via-indigo-600 to-emerald-700 flex items-center justify-center font-bold text-white text-base shadow-md shadow-purple-600/30">
             A
           </div>
           <span className="text-lg font-bold font-heading text-white">
-            Ashadullah<span className="text-purple-400">.dev</span>
+            Ashadullah
           </span>
         </div>
 
